@@ -1,0 +1,48 @@
+{
+  "RootObject": {
+    "Id": "e71f65bf-57f9-4829-82e5-9c70148c4992",
+    "Name": "ore",
+    "Tags": "ore",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Ore",
+        "__enabled": true,
+        "Worth": 1
+      },
+      {
+        "__type": "ModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": "road/rock002_2k/rock002_2k.vmat",
+        "Model": "models/ball.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "SphereCollider",
+        "__enabled": true,
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Radius": 4,
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "Rigidbody",
+        "__enabled": true,
+        "AngularDamping": 8,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {}
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "pouragegaming.rock002_2k"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "Name": "Furnace",
+  "Description": "Sells your ores",
+  "Icon": null,
+  "Model": "models/buildings/furnace.vmdl",
+  "Prefab": "prefabs/buildings/furnace.prefab",
+  "__references": []
+}

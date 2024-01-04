@@ -1,0 +1,39 @@
+{
+  "RootObject": {
+    "Id": "0ec045b7-7a26-4cb8-979c-9595a11e6ad5",
+    "Name": "dropper",
+    "Tags": "dropper,building",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Dropper",
+        "__enabled": true,
+        "DropPoint": "32,0,20",
+        "Interval": 2,
+        "Ore": "prefabs/ore.prefab"
+      },
+      {
+        "__type": "ModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551615,
+        "MaterialGroup": null,
+        "MaterialOverride": null,
+        "Model": "models/buildings/dropper.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "ModelCollider",
+        "__enabled": true,
+        "IsTrigger": false,
+        "Model": "models/buildings/dropper.vmdl",
+        "Static": true,
+        "Surface": null
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

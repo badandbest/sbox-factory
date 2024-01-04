@@ -1,0 +1,26 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/grid.shader"
+
+	//---- Rendering ----
+	F_DO_NOT_CAST_SHADOWS 1
+
+	g_bBuildMode "1"
+	g_vposition "[0.000 0.000]"
+	Grid "materials/grid.png"
+	Mask "materials/sprites/light_glow02_color.tga"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Translucent ----
+	g_flOpacityScale "1.000"
+
+	DynamicParams
+	{
+		g_bBuildMode "buildmode"
+		g_vposition "position\n"
+	}
+}

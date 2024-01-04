@@ -1,0 +1,164 @@
+{
+  "RootObject": {
+    "Id": "35fd9fc4-5905-465a-9f26-cd4518f32f64",
+    "Name": "player",
+    "Tags": "player",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Client",
+        "__enabled": true,
+        "Building": null,
+        "Money": 10,
+        "Workspace": null
+      },
+      {
+        "__type": "PlayerController",
+        "__enabled": true,
+        "AnimationHelper": "82d2fc3c-d445-4dfd-a1a9-3d92d227144b",
+        "Body": "82d2fc3c-d445-4dfd-a1a9-3d92d227144b",
+        "Eye": "df7c07f1-f256-403b-b9cf-44af215689a1",
+        "FirstPerson": true,
+        "Gravity": "0,0,800"
+      },
+      {
+        "__type": "CharacterController2",
+        "__enabled": true,
+        "Acceleration": 45,
+        "GroundAngle": 45,
+        "Height": 72,
+        "IgnoreLayers": "player,ore,trigger",
+        "Radius": 16,
+        "StepHeight": 18
+      },
+      {
+        "__type": "BoxCollider",
+        "__enabled": true,
+        "Center": "0,0,36",
+        "IsTrigger": false,
+        "Scale": "32,32,72",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "Rigidbody",
+        "__enabled": true,
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {
+          "Pitch": true,
+          "Yaw": true,
+          "Roll": true
+        }
+      }
+    ],
+    "Children": [
+      {
+        "Id": "82d2fc3c-d445-4dfd-a1a9-3d92d227144b",
+        "Name": "Body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "SkinnedModelRenderer",
+            "__enabled": true,
+            "BodyGroups": 341,
+            "BoneMergeTarget": null,
+            "CreateBoneObjects": false,
+            "MaterialGroup": "default",
+            "MaterialOverride": null,
+            "Model": "models/citizen/citizen.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "CitizenAnimationHelper",
+            "__enabled": true,
+            "BodyWeight": 1,
+            "EyeSource": "df7c07f1-f256-403b-b9cf-44af215689a1",
+            "EyesWeight": 1,
+            "HeadWeight": 1,
+            "Height": 1,
+            "IkLeftFoot": null,
+            "IkLeftHand": null,
+            "IkRightFoot": null,
+            "IkRightHand": null,
+            "LookAt": null,
+            "LookAtEnabled": false,
+            "Target": "82d2fc3c-d445-4dfd-a1a9-3d92d227144b"
+          }
+        ]
+      },
+      {
+        "Id": "df7c07f1-f256-403b-b9cf-44af215689a1",
+        "Name": "Eyes",
+        "Position": "0,0,64",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "CameraComponent",
+            "__enabled": true,
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 90,
+            "IsMainCamera": true,
+            "Orthographic": false,
+            "OrthographicHeight": 1204,
+            "Priority": 1,
+            "RenderExcludeTags": "viewmodel",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 10
+          }
+        ],
+        "Children": [
+          {
+            "Id": "9db68ddb-f3ff-409e-8dfd-97e01ef4db10",
+            "Name": "Viewmodel",
+            "Position": "0,0,0",
+            "Tags": "viewmodel",
+            "Components": [
+              {
+                "__type": "SkinnedModelRenderer",
+                "__enabled": true,
+                "BodyGroups": 18446744073709551519,
+                "BoneMergeTarget": null,
+                "CreateBoneObjects": false,
+                "MaterialGroup": null,
+                "MaterialOverride": null,
+                "Model": "weapons/rust_pistol/v_rust_pistol.vmdl",
+                "RenderType": "On",
+                "Tint": "1,1,1,1"
+              },
+              {
+                "__type": "CameraComponent",
+                "__enabled": true,
+                "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                "ClearFlags": "Stencil",
+                "FieldOfView": 90,
+                "IsMainCamera": false,
+                "Orthographic": false,
+                "OrthographicHeight": 1204,
+                "Priority": 2,
+                "RenderExcludeTags": "",
+                "RenderTags": "light,viewmodel",
+                "TargetEye": "None",
+                "Viewport": "0,0,1,1",
+                "ZFar": 10000,
+                "ZNear": 10
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "rust.v_rust_pistol"
+  ]
+}

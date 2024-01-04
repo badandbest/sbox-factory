@@ -1,0 +1,54 @@
+{
+  "RootObject": {
+    "Id": "21e5f212-011b-44a6-afac-ec8a368005fa",
+    "Name": "furnace",
+    "Tags": "building,furnace",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Furnace",
+        "__enabled": true
+      },
+      {
+        "__type": "ModelRenderer",
+        "__enabled": true,
+        "BodyGroups": 18446744073709551605,
+        "MaterialGroup": "default",
+        "MaterialOverride": null,
+        "Model": "models/buildings/furnace.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "BoxCollider",
+        "__enabled": true,
+        "Center": "0,0,0.5",
+        "IsTrigger": true,
+        "Scale": "32,32,1",
+        "Static": false,
+        "Surface": null
+      },
+      {
+        "__type": "LegacyParticleSystem",
+        "__enabled": true,
+        "ControlPoints": [
+          {
+            "Value": "Vector3",
+            "VectorValue": "0,0,41.69999",
+            "FloatValue": 40.699993,
+            "GameObjectValue": "prefabs/buildings/furnace.prefab"
+          }
+        ],
+        "Looped": true,
+        "Particles": "smokeparticlesmallcig.vpcf",
+        "PlaybackSpeed": 0.91
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": [
+    "sugmagaming.smokeparticlesmallcig"
+  ]
+}

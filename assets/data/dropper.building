@@ -1,0 +1,8 @@
+{
+  "Name": "Droppers",
+  "Description": "Dispenses ores.",
+  "Icon": null,
+  "Model": "models/buildings/dropper.vmdl",
+  "Prefab": "prefabs/buildings/dropper.prefab",
+  "__references": []
+}

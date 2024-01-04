@@ -1,0 +1,278 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "Folder"
+						name = "Belt"
+						children = 
+						[
+							{
+								_class = "RenderMeshFile"
+								name = "head_connected"
+								filename = "models/buildings/conveyor/conveyor.fbx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 0.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"Edge",
+										"Edge_001",
+										"Belt",
+										"belt_head_connected",
+										"head_connected",
+									]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "tail_connected"
+								filename = "models/buildings/conveyor/conveyor.fbx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 0.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"Edge",
+										"Edge_001",
+										"Belt",
+										"belt_tail_connected",
+										"tail_connected",
+									]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "head_edge"
+								filename = "models/buildings/conveyor/conveyor.fbx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 0.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"Edge",
+										"Edge_001",
+										"Belt",
+										"belt_head",
+										"belt_head_edge",
+										"head_edge",
+									]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "tail_edge"
+								filename = "models/buildings/conveyor/conveyor.fbx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 0.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"Edge",
+										"Edge_001",
+										"Belt",
+										"belt_head",
+										"belt_head_edge",
+										"tail_edge",
+									]
+								}
+							},
+							{
+								_class = "RenderMeshFile"
+								name = "body"
+								filename = "models/buildings/conveyor/conveyor.fbx"
+								import_translation = [ 0.0, 0.0, 0.0 ]
+								import_rotation = [ 0.0, 0.0, 0.0 ]
+								import_scale = 1.0
+								align_origin_x_type = "None"
+								align_origin_y_type = "None"
+								align_origin_z_type = "None"
+								parent_bone = ""
+								import_filter = 
+								{
+									exclude_by_default = true
+									exception_list = 
+									[
+										"Edge",
+										"Edge_001",
+										"Belt",
+										"belt_head",
+										"belt_head_edge",
+										"belt_body",
+										"body",
+									]
+								}
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "BodyGroup"
+						name = "Head"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "Head_Edge"
+								meshes = 
+								[
+									"head_edge",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "Head_Connected"
+								meshes = 
+								[
+									"head_connected",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+					{
+						_class = "BodyGroup"
+						name = "Tail"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "Tail_Edge"
+								meshes = 
+								[
+									"tail_edge",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "Tail_Connected"
+								meshes = 
+								[
+									"tail_connected",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "MaterialGroup"
+						name = "blueprint"
+						remaps = 
+						[
+							{
+								from = "materials/models/buildings/conveyor/belt.vmat"
+								to = "materials/models/buildings/conveyor/belt_blueprint.vmat"
+							},
+							{
+								from = "materials/models/buildings/conveyor/conveyor.vmat"
+								to = "materials/models/buildings/conveyor/conveyor_blueprint.vmat"
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "place_area"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = ""
+								surface_property = "rubber"
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -15.99, -15.99, 0.01 ]
+								hitbox_maxs = [ 15.99, 15.99, 7.99 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsHullFile"
+						name = "furnace"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_tags = "solid"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						filename = "models/buildings/conveyor/conveyor.fbx"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "SingleHull"
+						optimization_algorithm = "QEM"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}
