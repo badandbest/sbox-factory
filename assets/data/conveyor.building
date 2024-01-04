@@ -2,6 +2,7 @@
   "Name": "Conveyor",
   "Description": "Moves your ores.",
   "Icon": "models/buildings/conveyor.vmdl.png",
+  "Cost": 1,
   "Model": "models/buildings/conveyor.vmdl",
   "Prefab": "prefabs/buildings/conveyor.prefab",
   "__references": []
