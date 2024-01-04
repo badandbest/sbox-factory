@@ -531,7 +531,6 @@
         {
           "__type": "GameManager",
           "__enabled": true,
-          "IsMultiplayer": true,
           "PlayerPrefab": "prefabs/player.prefab",
           "SpawnPoints": [
             "56d33e21-82a2-4e9d-968e-d1b810b403cc"
@@ -736,56 +735,6 @@
               "Model": "models/grid.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Id": "f3f3e7fa-efa3-4187-afec-4bdc27a8a207",
-      "Name": "conveyor",
-      "Tags": "conveyor,building",
-      "Enabled": true,
-      "Components": [
-        {
-          "__type": "Conveyor",
-          "__enabled": true,
-          "Speed": 1
-        },
-        {
-          "__type": "ModelRenderer",
-          "__enabled": true,
-          "BodyGroups": 21,
-          "MaterialGroup": "1",
-          "MaterialOverride": null,
-          "Model": "models/buildings/conveyor.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "ModelCollider",
-          "__enabled": true,
-          "IsTrigger": false,
-          "Model": "models/buildings/conveyor.vmdl",
-          "Static": true,
-          "Surface": null
-        }
-      ],
-      "Children": [
-        {
-          "Id": "a6be235e-f739-458a-b977-8c899a5b05ba",
-          "Name": "belt",
-          "Tags": "ignore,conveyor,building",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "BoxCollider",
-              "__enabled": true,
-              "Center": "0,0,8.0625",
-              "IsTrigger": false,
-              "Scale": "32,28.75,0.0625",
-              "Static": false,
-              "Surface": null
             }
           ]
         }

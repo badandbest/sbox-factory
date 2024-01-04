@@ -32,23 +32,12 @@ public sealed class Workspace : Component, Component.INetworkListener
 		return new Transform( position, rotation );
 	}
 
+	/// <summary>
+	/// Construct a building.
+	/// </summary>
 	public void Place( BuildingResource building, Transform transform )
 	{
 		Owner.Money -= building.Cost;
 		Instantiate( GetPrefabScene( building.Prefab ), transform ).SetParent( GameObject );
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	/* Hold shift to continue placing.
-	 * Scroll wheel to rotate.
-	 * Right click to cancel.
-	 * Info on hotbar.
-	 */
 }

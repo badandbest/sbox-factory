@@ -1,2 +1,2 @@
 # sbox-factory
- A factory building gamemoded for s&box.
+ A factory building gamemode for s&box.

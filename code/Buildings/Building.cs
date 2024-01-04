@@ -9,8 +9,6 @@ public abstract class Building : Component
 	public Client Owner { get => Workspace.Owner; }
 	
 	public Workspace Workspace => Components.GetInParent<Workspace>();
-
-
 }
 
 [GameResource("Building Definition", "building", "A placable building.", Icon = "precision_manufacturing", IconBgColor = "#fdea60", IconFgColor = "black")]
