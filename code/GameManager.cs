@@ -33,7 +33,7 @@ public sealed class GameManager : Component, Component.INetworkListener
 	{
 		Log.Info( $"Player '{channel.DisplayName}' has joined the game" );
 		
-		var player = SceneUtility.Instantiate( PlayerPrefab, SpawnPoints.First().Transform.World );
+		var player = SceneUtility.Instantiate( PlayerPrefab );
 		player.Name = $"Player - {channel.DisplayName}";
 		player.BreakFromPrefab();
 

@@ -1,0 +1,27 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "minimal",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "minimal",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": "*",
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.floor_rough_asphalt#18674"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/minimal.vmap"
+      }
+    }
+  }
+}
