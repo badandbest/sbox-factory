@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "35fd9fc4-5905-465a-9f26-cd4518f32f64",
+    "Id": "de25382a-fed5-4ae3-aba1-f14b4a3a24c7",
     "Name": "player",
     "Tags": "player",
     "Enabled": true,
@@ -15,19 +15,20 @@
       {
         "__type": "PlayerController",
         "__enabled": true,
-        "AnimationHelper": "82d2fc3c-d445-4dfd-a1a9-3d92d227144b",
-        "Body": "82d2fc3c-d445-4dfd-a1a9-3d92d227144b",
-        "Eye": "df7c07f1-f256-403b-b9cf-44af215689a1",
-        "FirstPerson": true,
-        "Gravity": "0,0,800"
+        "AnimationHelper": "b617726f-58b4-45cf-8ecc-585e81898d28",
+        "CharacterController": "de25382a-fed5-4ae3-aba1-f14b4a3a24c7",
+        "CrouchMoveSpeed": 64,
+        "RunMoveSpeed": 190,
+        "SprintMoveSpeed": 320,
+        "WalkMoveSpeed": 190
       },
       {
-        "__type": "CharacterController2",
+        "__type": "CharacterController",
         "__enabled": true,
-        "Acceleration": 45,
+        "Acceleration": 32,
         "GroundAngle": 45,
-        "Height": 72,
-        "IgnoreLayers": "player,ore,trigger",
+        "Height": 64,
+        "IgnoreLayers": "",
         "Radius": 16,
         "StepHeight": 18
       },
@@ -39,23 +40,11 @@
         "Scale": "32,32,72",
         "Static": false,
         "Surface": null
-      },
-      {
-        "__type": "Rigidbody",
-        "__enabled": true,
-        "AngularDamping": 0,
-        "Gravity": true,
-        "LinearDamping": 0,
-        "Locking": {
-          "Pitch": true,
-          "Yaw": true,
-          "Roll": true
-        }
       }
     ],
     "Children": [
       {
-        "Id": "82d2fc3c-d445-4dfd-a1a9-3d92d227144b",
+        "Id": "b617726f-58b4-45cf-8ecc-585e81898d28",
         "Name": "Body",
         "Enabled": true,
         "Components": [
@@ -75,7 +64,7 @@
             "__type": "CitizenAnimationHelper",
             "__enabled": true,
             "BodyWeight": 1,
-            "EyeSource": "df7c07f1-f256-403b-b9cf-44af215689a1",
+            "EyeSource": "a0b42578-c46e-4baf-9c76-9db33cac202d",
             "EyesWeight": 1,
             "HeadWeight": 1,
             "Height": 1,
@@ -85,12 +74,12 @@
             "IkRightHand": null,
             "LookAt": null,
             "LookAtEnabled": false,
-            "Target": "82d2fc3c-d445-4dfd-a1a9-3d92d227144b"
+            "Target": "b617726f-58b4-45cf-8ecc-585e81898d28"
           }
         ]
       },
       {
-        "Id": "df7c07f1-f256-403b-b9cf-44af215689a1",
+        "Id": "a0b42578-c46e-4baf-9c76-9db33cac202d",
         "Name": "Eyes",
         "Position": "0,0,64",
         "Enabled": true,
@@ -100,7 +89,7 @@
             "__enabled": true,
             "BackgroundColor": "0.33333,0.46275,0.52157,1",
             "ClearFlags": "All",
-            "FieldOfView": 90,
+            "FieldOfView": 78,
             "IsMainCamera": true,
             "Orthographic": false,
             "OrthographicHeight": 1204,
@@ -115,7 +104,7 @@
         ],
         "Children": [
           {
-            "Id": "9db68ddb-f3ff-409e-8dfd-97e01ef4db10",
+            "Id": "4eb41454-3261-454c-9c98-214812af2dd8",
             "Name": "Viewmodel",
             "Position": "0,0,0",
             "Tags": "viewmodel",

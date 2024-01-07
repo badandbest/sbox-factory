@@ -1,4 +1,5 @@
 {
+  "Id": "21f9614f-b463-473c-a312-8e0ec94d3b37",
   "GameObjects": [
     {
       "Id": "4727628f-2eb4-4949-89a0-062d1d6d4b43",
@@ -141,6 +142,7 @@
                     "Mins": "-128,-128,-64",
                     "Maxs": "128,128,64"
                   },
+                  "Feathering": 0.02,
                   "Projection": "Sphere",
                   "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1"
@@ -194,6 +196,7 @@
                     "Mins": "-128,-128,-64",
                     "Maxs": "128,128,64"
                   },
+                  "Feathering": 0.02,
                   "Projection": "Sphere",
                   "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1"
@@ -247,6 +250,7 @@
                     "Mins": "-128,-128,-64",
                     "Maxs": "128,128,64"
                   },
+                  "Feathering": 0.02,
                   "Projection": "Sphere",
                   "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1"
@@ -300,6 +304,7 @@
                     "Mins": "-128,-128,-64",
                     "Maxs": "128,128,64"
                   },
+                  "Feathering": 0.02,
                   "Projection": "Sphere",
                   "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1"
@@ -353,6 +358,7 @@
                     "Mins": "-128,-128,-64",
                     "Maxs": "128,128,64"
                   },
+                  "Feathering": 0.02,
                   "Projection": "Sphere",
                   "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1"
@@ -406,6 +412,7 @@
                     "Mins": "-128,-128,-64",
                     "Maxs": "128,128,64"
                   },
+                  "Feathering": 0.02,
                   "Projection": "Sphere",
                   "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1"
@@ -459,6 +466,7 @@
                     "Mins": "-128,-128,-64",
                     "Maxs": "128,128,64"
                   },
+                  "Feathering": 0.02,
                   "Projection": "Sphere",
                   "Texture": "textures/cubemaps/default2.vtex",
                   "TintColor": "1,1,1,1"
