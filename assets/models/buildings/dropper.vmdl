@@ -11,10 +11,27 @@
 				[
 					{
 						_class = "RenderMeshFile"
+						disabled = true
 						filename = "models/buildings/dropper/dropper.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "models/buildings/dropper/dropper_placeholder.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, -90.0, 0.0 ]
+						import_scale = 0.16
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
@@ -54,6 +71,30 @@
 							exception_list = [  ]
 						}
 					},
+					{
+						_class = "PhysicsHullFile"
+						disabled = true
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, -90.0, 0.0 ]
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						filename = "models/buildings/dropper/dropper_placeholder.fbx"
+						import_scale = 0.16
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "HullPerElement"
+						optimization_algorithm = "Exact"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
 				]
 			},
 			{
@@ -84,6 +125,32 @@
 								hitbox_maxs = [ 15.99, 7.99, 31.99 ]
 							},
 						]
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "materials/dev/reflectivity_30.vmat"
+								to = "materials/dev/reflectivity_30.vmat"
+							},
+							{
+								from = "cube.003.vmat"
+								to = "materials/dev/reflectivity_30.vmat"
+							},
+							{
+								from = "cube.006.vmat"
+								to = "cube.006.vmat"
+							},
+						]
+						use_global_default = true
+						global_default_material = "materials/dev/reflectivity_30.vmat"
 					},
 				]
 			},

@@ -25,7 +25,7 @@
     "RankType": "None",
     "PerMapRanking": false,
     "LeaderboardType": "None",
-    "CsProjName": "",
+    "CsProjName": "Factory",
     "StartupScene": "scenes/multiplayer.scene",
     "ProjectTemplate": null,
     "Compiler": {
