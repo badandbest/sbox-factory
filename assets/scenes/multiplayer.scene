@@ -2,6 +2,32 @@
   "Id": "21f9614f-b463-473c-a312-8e0ec94d3b37",
   "GameObjects": [
     {
+      "Id": "0ecb99e5-2d38-47f3-bbf4-f1c732422526",
+      "Name": "Camera",
+      "Position": "0,0,64",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__enabled": true,
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 78,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
       "Id": "4727628f-2eb4-4949-89a0-062d1d6d4b43",
       "Name": "World",
       "Enabled": true,
@@ -26,9 +52,7 @@
           "__type": "GameManager",
           "__enabled": true,
           "PlayerPrefab": "prefabs/player.prefab",
-          "SpawnPoints": [
-            null
-          ]
+          "SpawnPoints": []
         }
       ],
       "Children": [
@@ -37,7 +61,6 @@
           "Name": "Workspace",
           "Position": "514.0609,0,0",
           "Networked": true,
-          "Enabled": true,
           "Components": [
             {
               "__type": "Workspace",
@@ -48,26 +71,6 @@
               },
               "Owner": null
             }
-          ],
-          "Children": [
-            {
-              "Id": "5b4aa3f2-485e-4231-bf94-1330740199d9",
-              "Name": "Cube",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__enabled": true,
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialGroup": null,
-                  "MaterialOverride": null,
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ]
-            }
           ]
         },
         {
@@ -76,7 +79,6 @@
           "Position": "362.0385,-362.0389,0",
           "Rotation": "0,0,-0.3826836,0.9238796",
           "Networked": true,
-          "Enabled": true,
           "Components": [
             {
               "__type": "Workspace",
@@ -92,7 +94,6 @@
           "Position": "-0.0004272461,-512.0001,0",
           "Rotation": "0,0,-0.7071071,0.7071066",
           "Networked": true,
-          "Enabled": true,
           "Components": [
             {
               "__type": "Workspace",
@@ -108,7 +109,6 @@
           "Position": "-362.0391,-362.0383,0",
           "Rotation": "0,0,-0.9238797,0.382683",
           "Networked": true,
-          "Enabled": true,
           "Components": [
             {
               "__type": "Workspace",
@@ -124,7 +124,6 @@
           "Position": "-512,0.000655112,0",
           "Rotation": "0,0,-1,-0.0000006397578",
           "Networked": true,
-          "Enabled": true,
           "Components": [
             {
               "__type": "Workspace",
@@ -140,7 +139,6 @@
           "Position": "-362.0383,362.0393,0",
           "Rotation": "0,0,-0.9238793,-0.3826842",
           "Networked": true,
-          "Enabled": true,
           "Components": [
             {
               "__type": "Workspace",
@@ -156,7 +154,6 @@
           "Position": "0.0009765625,512,0",
           "Rotation": "0,0,-0.7071061,-0.7071075",
           "Networked": true,
-          "Enabled": true,
           "Components": [
             {
               "__type": "Workspace",
@@ -172,7 +169,6 @@
           "Position": "362.0395,362.0378,0",
           "Rotation": "0,0,-0.3826824,-0.9238799",
           "Networked": true,
-          "Enabled": true,
           "Components": [
             {
               "__type": "Workspace",
@@ -189,7 +185,7 @@
     "FixedUpdateFrequency": 50,
     "Lerping": true,
     "MaxFixedUpdates": 5,
-    "NetworkFrequency": 60,
+    "NetworkFrequency": 50,
     "ThreadedAnimation": true,
     "TimeScale": 1,
     "UseFixedUpdate": true

@@ -5,7 +5,7 @@ namespace Factory;
 
 [Group( "Factory" )]
 [Title( "Player Controller" )]
-public sealed class PlayerController : Component
+public sealed class PlayerController : Component, INetworkSerializable
 {
 	[Property]
 	public CharacterController CharacterController { get; set; }
@@ -18,26 +18,32 @@ public sealed class PlayerController : Component
 	[Property] public CitizenAnimationHelper AnimationHelper { get; set; }
 
 	public bool Crouching;
-
-	public Angles EyeAngles;
-	public Vector3 WishVelocity;
 	public bool WishCrouch;
+
+	public Vector3 WishVelocity;
+	
+	public Angles EyeAngles;
 	public float EyeHeight = 64;
 
 	protected override void OnStart()
 	{
+		// First person stuffd
 		AnimationHelper.Target.RenderType = IsProxy ? ModelRenderer.ShadowRenderType.On : ModelRenderer.ShadowRenderType.ShadowsOnly;
+		if ( Components.TryGet( out WorldPanel panel, FindMode.InDescendants ) )
+		{
+			panel.GameObject.Enabled = IsProxy;
+		}
 	}
 
 	protected override void OnUpdate()
 	{
-		if ( IsProxy )
-			return;
+		if ( !IsProxy )
+		{
+			MouseInput();
 
-		MouseInput();
-
-		Transform.Rotation = new Angles( 0, EyeAngles.yaw, 0 );
-
+			Transform.Rotation = new Angles( 0, EyeAngles.yaw, 0 );
+		}
+		
 		UpdateAnimation();
 	}
 
@@ -81,6 +87,12 @@ public sealed class PlayerController : Component
 		return 0.2f;
 	}
 
+	[Broadcast]
+	public void OnJump()
+	{
+		AnimationHelper?.TriggerJump();
+	}
+	
 	private void MovementInput()
 	{
 		if ( CharacterController is null )
@@ -96,6 +108,7 @@ public sealed class PlayerController : Component
 		{
 			lastJump = 0;
 			cc.Punch( Vector3.Up * 300 );
+			OnJump();
 		}
 
 		if ( !WishVelocity.IsNearlyZero() )
@@ -219,7 +232,7 @@ public sealed class PlayerController : Component
 		if ( IsProxy ) return;
 		UpdateCamera();
 	}
-
+	
 	private void UpdateAnimation()
 	{
 		if ( AnimationHelper is null ) return;
@@ -231,5 +244,16 @@ public sealed class PlayerController : Component
 
 		var lookDir = EyeAngles.ToRotation().Forward * 1024;
 		AnimationHelper.WithLook( lookDir );
+	}
+	public void Write( ref ByteStream stream )
+	{
+		stream.Write( Crouching );
+		stream.Write( EyeAngles );
+		
+	}
+	public void Read( ByteStream stream )
+	{
+		Crouching = stream.Read<bool>();
+		EyeAngles = stream.Read<Angles>();
 	}
 }

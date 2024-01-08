@@ -33,13 +33,11 @@ public sealed class GameManager : Component, Component.INetworkListener
 	{
 		Log.Info( $"Player '{channel.DisplayName}' has joined the game" );
 		
+		// Setup player
 		var player = SceneUtility.Instantiate( PlayerPrefab );
-		player.Name = $"Player - {channel.DisplayName}";
+		player.Name = channel.DisplayName;
 		player.BreakFromPrefab();
-
-		// Make the client the owner
 		player.Network.Spawn( channel );
-		player.Components.Get<Client>().Setup( Components.GetInChildren<Workspace>() );
 	}
 }
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "factory", "code\factory.csproj", "{5696A8EF-97D5-70B3-AA6B-A4FF1AF22BCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factory", "code\Factory.csproj", "{794F8405-47CB-BA66-1FFD-58F8C9AE796D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base Library", "C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\base\code\Base Library.csproj", "{3CFCECAD-98E9-581B-90CF-75E5F2B140CA}"
 EndProject
@@ -26,10 +26,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-			{5696A8EF-97D5-70B3-AA6B-A4FF1AF22BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5696A8EF-97D5-70B3-AA6B-A4FF1AF22BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5696A8EF-97D5-70B3-AA6B-A4FF1AF22BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5696A8EF-97D5-70B3-AA6B-A4FF1AF22BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+			{794F8405-47CB-BA66-1FFD-58F8C9AE796D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794F8405-47CB-BA66-1FFD-58F8C9AE796D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794F8405-47CB-BA66-1FFD-58F8C9AE796D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794F8405-47CB-BA66-1FFD-58F8C9AE796D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3CFCECAD-98E9-581B-90CF-75E5F2B140CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3CFCECAD-98E9-581B-90CF-75E5F2B140CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CFCECAD-98E9-581B-90CF-75E5F2B140CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
