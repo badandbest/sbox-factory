@@ -1,0 +1,29 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "singleplayer",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "singleplayer",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": "*",
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.floor_rough_asphalt#18674",
+        "dhedge.tgsboxprop#12001",
+        "facepunch.v_toolgun#33704"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/singleplayer.vmap"
+      }
+    }
+  }
+}
