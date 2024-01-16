@@ -1,11 +1,12 @@
 {
   "RootObject": {
-    "Id": "0ec045b7-7a26-4cb8-979c-9595a11e6ad5",
+    "Id": "3d512963-9de4-432e-b447-a024b4b27eb3",
     "Name": "dropper",
     "Tags": "dropper,building",
     "Enabled": true,
     "Components": [
       {
+        "__version": 0,
         "__type": "Dropper",
         "__enabled": true,
         "DropPoint": "32,0,20",
@@ -13,6 +14,7 @@
         "Ore": "prefabs/ore.prefab"
       },
       {
+        "__version": 0,
         "__type": "ModelRenderer",
         "__enabled": true,
         "BodyGroups": 18446744073709551615,
@@ -23,6 +25,7 @@
         "Tint": "1,1,1,1"
       },
       {
+        "__version": 0,
         "__type": "ModelCollider",
         "__enabled": true,
         "IsTrigger": false,

@@ -1,7 +1,6 @@
-using System.Linq;
 namespace Factory.Buildings;
 
-public sealed class Dropper : Building
+public sealed class Dropper : BaseBuilding
 {
 	[Property, Group( "Ore" )] 
 	public Vector3 DropPoint { get; set; }
@@ -15,15 +14,18 @@ public sealed class Dropper : Building
 	protected override void OnFixedUpdate()
 	{
 		// Using tick rate so that all droppers fire at the same time.
+		/*
 		if ( Time.Tick % (Scene.FixedUpdateFrequency * Interval) == 0 ) 
 		{
 			Drop();
 		}
+		*/
+		
 	}
 
 	public void Drop()
 	{
-		var ore = SceneUtility.Instantiate( Ore, Transform.World.PointToWorld( DropPoint ) );
-		ore.SetParent( Scene.Children.First() ); // Get it the fuck out of the inspector god damn!!!
+		var ore = Ore.Clone( Transform.World.PointToWorld( DropPoint ) );
+		ore.Flags = GameObjectFlags.Hidden; // Get it the fuck out of the inspector god damn!!!
 	}
 }

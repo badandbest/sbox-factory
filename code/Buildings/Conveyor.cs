@@ -1,6 +1,6 @@
 namespace Factory.Buildings;
 
-public class Conveyor : Building
+public class Conveyor : BaseBuilding
 {
 	float _speed;
 	[Property,Group("Conveyor")] 

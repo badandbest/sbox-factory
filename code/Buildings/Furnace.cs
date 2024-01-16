@@ -1,7 +1,7 @@
 using System;
 namespace Factory.Buildings;
 
-public class Furnace : Building, Component.ITriggerListener
+public class Furnace : BaseBuilding, Component.ITriggerListener
 {
 	public void OnTriggerEnter( Collider other )
 	{
@@ -15,7 +15,7 @@ public class Furnace : Building, Component.ITriggerListener
 			return;
 		}
 		
-		Owner.Money += (int)MathF.Round( ore.Worth );
+		//Owner.Money += (int)MathF.Round( ore.Worth );
 		ore.Melt();
 	}
 	
