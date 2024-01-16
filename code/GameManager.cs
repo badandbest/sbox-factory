@@ -1,8 +1,6 @@
 global using Sandbox;
-using Factory.Player;
+using Sandbox.Diagnostics;
 using Sandbox.Network;
-using System.Collections.Generic;
-using System.Linq;
 namespace Factory;
 
 [Title( "Game Manager" )]
@@ -11,33 +9,44 @@ namespace Factory;
 public sealed class GameManager : Component, Component.INetworkListener
 {
 	/// <summary>
-	/// The prefab to spawn for the player to control.
+	/// Is this lobby multiplayer?
 	/// </summary>
-	[Property] public GameObject PlayerPrefab { get; set; }
-	
-	[Property] public List<GameObject> SpawnPoints { get; set; }
-	
-	protected override void OnStart()
-	{
-		// There's going to be a lot of rigidbodies at once.
-		Scene.PhysicsWorld.SimulationMode = PhysicsSimulationMode.Discrete;
-		
-		// Create a lobby if we're not connected
-		if ( !GameNetworkSystem.IsActive )
-		{
-			GameNetworkSystem.CreateLobby();
-		}
-	}
+	[Property]
+	bool IsMultiplayer { get; set; }
 
+	/// <summary>
+	/// The prefab to spawn for the player to control.
+	/// /// </summary>
+	[Property]
+	GameObject PlayerPrefab { get; set; }
+
+	protected override void OnAwake()
+	{
+		if ( IsMultiplayer )
+		{
+			// Create a lobby if we're not connected
+			if ( !GameNetworkSystem.IsActive ) GameNetworkSystem.CreateLobby();
+		}
+		else OnActive( Connection.Local );
+	}
+	
 	public void OnActive( Connection channel )
 	{
-		Log.Info( $"Player '{channel.DisplayName}' has joined the game" );
+		// Get an available workspace.
+		var workspace = Components.Get<Workspace>( FindMode.DisabledInSelfAndChildren );
+		Assert.NotNull( workspace, "No available workspaces." );
+		workspace.Owner = channel.Id;
 		
-		// Setup player
-		var player = SceneUtility.Instantiate( PlayerPrefab );
-		player.Name = channel.DisplayName;
-		player.BreakFromPrefab();
+		// Spawn this object and apply clothing.
+		var player = PlayerPrefab.Clone( global::Transform.Zero, name: "Player" );
+		if ( player.Components.TryGet<SkinnedModelRenderer>( out var body, FindMode.EverythingInSelfAndDescendants ) )
+		{
+			var clothing = new ClothingContainer();
+			clothing.Deserialize( channel.GetUserData( "avatar" ) );
+			clothing.Apply( body );
+		}
+		
+		// Make the client the owner
 		player.Network.Spawn( channel );
 	}
 }
-

@@ -26,7 +26,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "Factory",
-    "StartupScene": "scenes/multiplayer.scene",
+    "StartupScene": "scenes/menu.scene",
     "ProjectTemplate": null,
     "Compiler": {
       "RootNamespace": "Factory",
@@ -75,12 +75,7 @@
           "GroupName": "Movement"
         },
         {
-          "Name": "Walk",
-          "KeyboardCode": "alt",
-          "GroupName": "Movement"
-        },
-        {
-          "Name": "Duck",
+          "Name": "Crouch",
           "KeyboardCode": "ctrl",
           "GamepadCode": "B",
           "GroupName": "Movement"
@@ -195,6 +190,11 @@
           "Name": "Rotate",
           "KeyboardCode": "r",
           "GroupName": "Actions"
+        },
+        {
+          "Name": "Walk",
+          "KeyboardCode": "ALT",
+          "GroupName": "Other"
         }
       ]
     },
