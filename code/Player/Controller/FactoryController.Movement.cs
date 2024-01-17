@@ -22,6 +22,18 @@ public sealed partial class FactoryController
 			Components.Get<CharacterController>().Height = _crouched ? 36 : 72;
 		}
 	}
+	
+	float MoveSpeed
+	{
+		get
+		{
+			if ( Crouched ) return 64.0f;
+			if ( Input.Down( "run" ) ) return 320.0f;
+			if ( Input.Down( "walk" ) ) return 110.0f;
+			
+			return 190.0f;
+		}
+	}
 
 	protected override void OnFixedUpdate()
 	{
@@ -29,11 +41,8 @@ public sealed partial class FactoryController
 		var cc = Components.Get<CharacterController>();
 
 		var direction = Input.AnalogMove.Normal * Rotation.FromYaw( EyeAngles.yaw );
-		var speed = Crouched ? 64.0f : Input.Down( "run" ) ? 320.0f : 190.0f;
+		WishVelocity = direction * MoveSpeed;
 
-		WishVelocity = direction * speed;
-
-		
 		if ( cc.IsOnGround )
 		{
 			// Jump.
