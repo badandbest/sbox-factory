@@ -3,24 +3,14 @@ namespace Factory.Player;
 
 public sealed partial class FactoryController
 {
-	/// <summary>
-	/// Current facing direction.
-	/// </summary>
-	[Property, Category( "Camera" ), Sync( Query = true )]
+	[Property, Category( "Camera" ), Sync]
 	public Angles EyeAngles { get; set; }
 
-	/// <summary>
-	/// Vertical eye offset.
-	/// </summary>
 	[Range( 28.0f, 64.0f )]
-	[Property, Category( "Camera" ), Sync( Query = true )]
+	[Property, Category( "Camera" ), Sync]
 	public float EyeHeight { get; set; } = 64;
 
 	bool _firstPerson { get; set; } = true;
- 	/// <summary>
-	/// Are we in firstperson?
-	/// </summary>
-	[Property, Category( "Camera" )]
 	public bool FirstPerson
 	{
 		get => _firstPerson;
@@ -34,31 +24,18 @@ public sealed partial class FactoryController
 		} 
 	}
 	
-	public Ray AimRay => new( Transform.Position + new Vector3( 0f, 0f, EyeHeight ), EyeAngles.Forward );
-
-	protected override void OnStart()
+	private void CameraInput()
 	{
-		// We don't want to show up to ourselves.
-		FirstPerson = !IsProxy;
-	}
-
-	protected override void OnPreRender()
-	{
-		Animate();
-		if ( IsProxy ) return;
-		
 		// Mouse input.
 		EyeAngles += Input.AnalogLook;
 		EyeAngles = new Angles( EyeAngles.pitch.Clamp( -90, 90 ), EyeAngles.yaw, 0 );
-
-		
+	    
 		// Lerp EyeHeight so it's smooth.
-		EyeHeight = EyeHeight.LerpTo( Crouched ? 28 : 64, Time.Delta * 10.0f );
+		EyeHeight = EyeHeight.LerpTo( Crouching ? 28 : 64, Time.Delta * 10.0f );
 		
 		var cam = Scene.Camera;
 		cam.FieldOfView = Preferences.FieldOfView;
 		cam.Transform.Rotation = EyeAngles;
-
 		
 		// Third person.
 		if ( Input.Pressed( "View" ) ) FirstPerson = !FirstPerson;
@@ -68,19 +45,20 @@ public sealed partial class FactoryController
 			cam.Transform.Position = tr.EndPosition;
 			return;
 		}
-			
+
 		// First person.
 		cam.Transform.Position = AimRay.Position;
 	}
-
-	private void Animate()
+	
+	protected override void OnPreRender()
 	{
 		var anim = Components.GetInChildren<CitizenAnimationHelper>();
 		var cc = Components.Get<CharacterController>();
-
+		
 		anim.Target.Transform.Rotation = Rotation.FromYaw( EyeAngles.yaw );
 		anim.WithLook( EyeAngles.Forward );
-
+		
+		anim.MoveStyle = WishVelocity.Length < 160f ? CitizenAnimationHelper.MoveStyles.Walk : CitizenAnimationHelper.MoveStyles.Run;
 		anim.WithVelocity( cc.Velocity );
 		anim.WithWishVelocity( WishVelocity );
 		

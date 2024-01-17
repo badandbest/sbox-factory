@@ -194,7 +194,7 @@
         {
           "Name": "Walk",
           "KeyboardCode": "ALT",
-          "GroupName": "Other"
+          "GroupName": "Movement"
         }
       ]
     },

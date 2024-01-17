@@ -1,7 +1,7 @@
 {
   "RootObject": {
-    "Id": "b4733456-1106-425c-a9bc-b69dc82d6a2c",
-    "Name": "Player",
+    "Id": "b014d15a-27eb-4916-874c-e5eb80f47fe5",
+    "Name": "player",
     "Tags": "player",
     "Enabled": true,
     "Components": [
@@ -9,10 +9,9 @@
         "__version": 0,
         "__type": "FactoryController",
         "__enabled": true,
-        "Crouched": false,
+        "Crouching": false,
         "EyeAngles": "0,0,0",
         "EyeHeight": 64,
-        "FirstPerson": true,
         "WishVelocity": "0,0,0"
       },
       {
@@ -21,7 +20,7 @@
         "__enabled": true,
         "Acceleration": 32,
         "GroundAngle": 45,
-        "Height": 72,
+        "Height": 64,
         "IgnoreLayers": "trigger",
         "Radius": 16,
         "StepHeight": 18
@@ -29,7 +28,7 @@
     ],
     "Children": [
       {
-        "Id": "b2ba628e-1dab-4b30-afe7-c32118df3b91",
+        "Id": "3249503c-a101-4e9d-9b24-79145ecaca84",
         "Name": "Body",
         "Enabled": true,
         "Components": [
@@ -61,7 +60,7 @@
             "IkRightHand": null,
             "LookAt": null,
             "LookAtEnabled": false,
-            "Target": "b2ba628e-1dab-4b30-afe7-c32118df3b91"
+            "Target": "3249503c-a101-4e9d-9b24-79145ecaca84"
           }
         ]
       }

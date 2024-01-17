@@ -1,4 +1,3 @@
-using System.Linq;
 namespace Factory.Player;
 
 [Group( "Factory" )]
@@ -6,15 +5,25 @@ namespace Factory.Player;
 [Icon( "switch_account" )]
 public sealed partial class FactoryController : Component
 {
-	public Workspace Workspace => Scene.Components.GetAll<Workspace>( FindMode.InDescendants ).First( x => x.Owner == Network.OwnerId );
-	
-	protected override void OnEnabled()
+	public Ray AimRay => new( Transform.Position + new Vector3( 0f, 0f, EyeHeight ), EyeAngles.Forward );
+
+	protected override void OnStart()
 	{
-		Workspace.GameObject.Enabled = true;
+		FirstPerson = !IsProxy;
 	}
 
-	protected override void OnDisabled()
+	protected override void OnUpdate()
 	{
-		Workspace.GameObject.Enabled = false;
+		if ( IsProxy ) return;
+		
+		CameraInput();
+	}
+
+	protected override void OnFixedUpdate()
+	{
+		if ( IsProxy ) return;
+		
+		CrouchInput();
+		MovementInput();
 	}
 }
