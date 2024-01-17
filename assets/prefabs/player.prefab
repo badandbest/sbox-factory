@@ -7,7 +7,7 @@
     "Components": [
       {
         "__version": 0,
-        "__type": "FactoryController",
+        "__type": "Player",
         "__enabled": true,
         "Crouching": false,
         "EyeAngles": "0,0,0",

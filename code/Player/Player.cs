@@ -1,9 +1,9 @@
 namespace Factory.Player;
 
 [Group( "Factory" )]
-[Title( "Factory Controller" )]
+[Title( "Player" )]
 [Icon( "switch_account" )]
-public sealed partial class FactoryController : Component
+public sealed partial class Player : Component
 {
 	public Ray AimRay => new( Transform.Position + new Vector3( 0f, 0f, EyeHeight ), EyeAngles.Forward );
 

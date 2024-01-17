@@ -1,7 +1,7 @@
 using Sandbox.Citizen;
 namespace Factory.Player;
 
-public sealed partial class FactoryController
+public sealed partial class Player
 {
 	[Property, Category( "Camera" ), Sync]
 	public Angles EyeAngles { get; set; }
