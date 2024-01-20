@@ -1,0 +1,40 @@
+@using Sandbox.UI
+@inherits PanelComponent
+@attribute [StyleSheet]
+
+<root>
+	<img class="background" src="ui/menu/background.jpg"/>
+	
+	<svg class="logo" src="ui/menu/logo.svg"></svg>
+
+	<div class="button-container">
+		
+		<div id="Button" @onclick="@Singleplayer">
+			<i>person</i>
+			<label class="title">Singleplayer</label>
+			<label class="description">Play by yourself</label>
+		</div>
+
+		<div id="Button" @onclick="@Multiplayer">
+			<i>groups</i>
+			<label class="title">Multiplayer</label>
+			<label class="description">Play with friends</label>
+		</div>
+
+	</div>
+</root>
+
+@code
+{
+	[Property] SceneFile GameScene { get; set; }
+	
+	private void Singleplayer()
+	{
+		Scene.Load( GameScene );
+	}
+	
+	private void Multiplayer()
+	{
+		Log.Info( "Multiplayer" );
+	}
+}
