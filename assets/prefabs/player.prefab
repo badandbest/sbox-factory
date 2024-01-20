@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "b014d15a-27eb-4916-874c-e5eb80f47fe5",
+    "Id": "01a84181-da94-4ab2-8215-45e63926ad3f",
     "Name": "player",
     "Tags": "player",
     "Enabled": true,
@@ -28,7 +28,7 @@
     ],
     "Children": [
       {
-        "Id": "3249503c-a101-4e9d-9b24-79145ecaca84",
+        "Id": "28c45771-4635-461f-b179-18fb4740e4da",
         "Name": "Body",
         "Enabled": true,
         "Components": [
@@ -47,6 +47,12 @@
           },
           {
             "__version": 0,
+            "__type": "PlayerDresserHelper",
+            "__enabled": true,
+            "Target": "28c45771-4635-461f-b179-18fb4740e4da"
+          },
+          {
+            "__version": 0,
             "__type": "CitizenAnimationHelper",
             "__enabled": true,
             "BodyWeight": 1,
@@ -60,7 +66,7 @@
             "IkRightHand": null,
             "LookAt": null,
             "LookAtEnabled": false,
-            "Target": "3249503c-a101-4e9d-9b24-79145ecaca84"
+            "Target": "28c45771-4635-461f-b179-18fb4740e4da"
           }
         ]
       }

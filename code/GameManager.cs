@@ -37,16 +37,8 @@ public sealed class GameManager : Component, Component.INetworkListener
 		Assert.NotNull( workspace, "No available workspaces." );
 		workspace.Owner = channel.Id;
 		
-		// Spawn this object and apply clothing.
+		// Spawn this object and make the client the owner
 		var player = PlayerPrefab.Clone( global::Transform.Zero, name: "Player" );
-		if ( player.Components.TryGet<SkinnedModelRenderer>( out var body, FindMode.EverythingInSelfAndDescendants ) )
-		{
-			var clothing = new ClothingContainer();
-			clothing.Deserialize( channel.GetUserData( "avatar" ) );
-			clothing.Apply( body );
-		}
-		
-		// Make the client the owner
-		player.Network.Spawn( channel );
+		player.NetworkSpawn( channel );
 	}
 }
