@@ -20,7 +20,7 @@ public sealed class GameManager : Component, Component.INetworkListener
 	[Property]
 	GameObject PlayerPrefab { get; set; }
 
-	protected override void OnAwake()
+	protected override void OnStart()
 	{
 		if ( IsMultiplayer )
 		{
@@ -33,9 +33,9 @@ public sealed class GameManager : Component, Component.INetworkListener
 	public void OnActive( Connection channel )
 	{
 		// Get an available workspace.
-		var workspace = Components.Get<Workspace>( FindMode.DisabledInSelfAndChildren );
+		var workspace = GameObject.Children.Find( x => x.Network.OwnerConnection == null );
 		Assert.NotNull( workspace, "No available workspaces." );
-		workspace.Owner = channel.Id;
+		workspace.Network.AssignOwnership( channel );
 		
 		// Spawn this object and make the client the owner
 		var player = PlayerPrefab.Clone( global::Transform.Zero, name: "Player" );
