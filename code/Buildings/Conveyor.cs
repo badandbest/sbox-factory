@@ -61,11 +61,10 @@ public class Conveyor : BaseBuilding
 
 	protected override void OnFixedUpdate()
 	{
-		// Push rigidbodies, then teleport back.
-		var body = Components.GetInChildren<Collider>().KeyframeBody;
+		var body = Components.Get<Collider>().KeyframeBody;
 
-
-		body.Position = Transform.Position + Transform.Rotation.Backward * _speed;
+		// Teleport rigidbodies, then push back.
+		body.Position += Transform.Rotation.Backward * _speed;
 		body.Move( Transform.World, Time.Delta );
 	}
 }
