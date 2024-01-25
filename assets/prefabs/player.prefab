@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "Id": "01a84181-da94-4ab2-8215-45e63926ad3f",
+    "Id": "15efb1ef-d072-4243-8fc2-43f9b99b14ab",
     "Name": "player",
     "Tags": "player",
     "Enabled": true,
@@ -15,6 +15,7 @@
       {
         "__type": "CharacterController",
         "Acceleration": 32,
+        "Bounciness": 0.3,
         "GroundAngle": 45,
         "Height": 64,
         "IgnoreLayers": "trigger",
@@ -24,7 +25,7 @@
     ],
     "Children": [
       {
-        "Id": "28c45771-4635-461f-b179-18fb4740e4da",
+        "Id": "e71de0b2-72c2-46a0-9837-298d526dba16",
         "Name": "Body",
         "Enabled": true,
         "Components": [
@@ -38,14 +39,6 @@
             "Model": "models/citizen/citizen.vmdl",
             "RenderType": "On",
             "Tint": "1,1,1,1"
-          },
-          {
-            "__type": "PlayerDresserHelper",
-            "Target": {
-              "_type": "component",
-              "go": "28c45771-4635-461f-b179-18fb4740e4da",
-              "component_type": "SkinnedModelRenderer"
-            }
           },
           {
             "__type": "CitizenAnimationHelper",
@@ -62,7 +55,7 @@
             "LookAtEnabled": false,
             "Target": {
               "_type": "component",
-              "go": "28c45771-4635-461f-b179-18fb4740e4da",
+              "go": "e71de0b2-72c2-46a0-9837-298d526dba16",
               "component_type": "SkinnedModelRenderer"
             }
           }

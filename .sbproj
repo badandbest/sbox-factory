@@ -11,9 +11,7 @@
   "MenuResources": "*",
   "HasCode": true,
   "CodePath": "/code/",
-  "PackageReferences": [
-    "badandbest.dresserhelper"
-  ],
+  "PackageReferences": [],
   "EditorReferences": null,
   "Metadata": {
     "MaxPlayers": 4,
