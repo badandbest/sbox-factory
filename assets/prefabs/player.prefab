@@ -6,18 +6,14 @@
     "Enabled": true,
     "Components": [
       {
-        "__version": 0,
         "__type": "Player",
-        "__enabled": true,
         "Crouching": false,
         "EyeAngles": "0,0,0",
         "EyeHeight": 64,
         "WishVelocity": "0,0,0"
       },
       {
-        "__version": 0,
         "__type": "CharacterController",
-        "__enabled": true,
         "Acceleration": 32,
         "GroundAngle": 45,
         "Height": 64,
@@ -33,9 +29,7 @@
         "Enabled": true,
         "Components": [
           {
-            "__version": 0,
             "__type": "SkinnedModelRenderer",
-            "__enabled": true,
             "BodyGroups": 341,
             "BoneMergeTarget": null,
             "CreateBoneObjects": false,
@@ -46,15 +40,15 @@
             "Tint": "1,1,1,1"
           },
           {
-            "__version": 0,
             "__type": "PlayerDresserHelper",
-            "__enabled": true,
-            "Target": "28c45771-4635-461f-b179-18fb4740e4da"
+            "Target": {
+              "_type": "component",
+              "go": "28c45771-4635-461f-b179-18fb4740e4da",
+              "component_type": "SkinnedModelRenderer"
+            }
           },
           {
-            "__version": 0,
             "__type": "CitizenAnimationHelper",
-            "__enabled": true,
             "BodyWeight": 1,
             "EyeSource": null,
             "EyesWeight": 1,
@@ -66,7 +60,11 @@
             "IkRightHand": null,
             "LookAt": null,
             "LookAtEnabled": false,
-            "Target": "28c45771-4635-461f-b179-18fb4740e4da"
+            "Target": {
+              "_type": "component",
+              "go": "28c45771-4635-461f-b179-18fb4740e4da",
+              "component_type": "SkinnedModelRenderer"
+            }
           }
         ]
       }

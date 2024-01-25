@@ -8,9 +8,12 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
+          "__type": "Client",
+          "Money": 0,
+          "Tool": null
+        },
+        {
           "__type": "CameraComponent",
-          "__enabled": true,
           "BackgroundColor": "0.33333,0.46275,0.52157,1",
           "ClearFlags": "All",
           "FieldOfView": 78,
@@ -33,9 +36,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "MapInstance",
-          "__enabled": true,
           "MapName": "maps/singleplayer.vmap",
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
@@ -50,9 +51,7 @@
       "Enabled": true,
       "Components": [
         {
-          "__version": 0,
           "__type": "GameManager",
-          "__enabled": true,
           "IsMultiplayer": true,
           "PlayerPrefab": "prefabs/player.prefab"
         }
@@ -60,59 +59,26 @@
       "Children": [
         {
           "Id": "4b90c04d-8bc8-4ffe-b18a-8bd04b2bbf2f",
-          "Name": "Workspace 1",
+          "Name": "Workspace (1)",
+          "Networked": true,
+          "Enabled": true,
           "Components": [
             {
-              "__version": 0,
               "__type": "Workspace",
-              "__enabled": true,
               "Owner": "00000000-0000-0000-0000-000000000000"
             }
-          ],
-          "Children": [
+          ]
+        },
+        {
+          "Id": "ea27582a-5880-4014-baa7-bd17deea052b",
+          "Name": "Workspace (2)",
+          "Position": "256,0,0",
+          "Networked": true,
+          "Enabled": true,
+          "Components": [
             {
-              "Id": "e5aefe3d-215a-4e7f-9b43-6b2dd661a000",
-              "Name": "conveyor",
-              "Position": "112,0,0.9999896",
-              "Rotation": "0.00000003017909,0.00000002980005,1,-0.0000006397578",
-              "Tags": "building,conveyor",
-              "Enabled": true,
-              "__Prefab": "prefabs/buildings/conveyor.prefab"
-            },
-            {
-              "Id": "91deabf9-4a11-4a33-91bd-72508054803f",
-              "Name": "conveyor",
-              "Position": "80,0,0.9999896",
-              "Rotation": "0.00000003017909,0.00000002980005,1,-0.0000006397578",
-              "Tags": "building,conveyor",
-              "Enabled": true,
-              "__Prefab": "prefabs/buildings/conveyor.prefab"
-            },
-            {
-              "Id": "3d512963-9de4-432e-b447-a024b4b27eb3",
-              "Name": "dropper",
-              "Position": "112,-32,1.000011",
-              "Rotation": "0,0,0.707107,0.7071065",
-              "Tags": "dropper,building",
-              "Enabled": true,
-              "__Prefab": "prefabs/buildings/dropper.prefab"
-            },
-            {
-              "Id": "777bd57d-b489-4f40-90dc-e3154a1ab35e",
-              "Name": "dropper",
-              "Position": "112,32,1.000011",
-              "Rotation": "-0.00000004348705,-0.00000004071565,-0.707107,0.7071065",
-              "Tags": "dropper,building",
-              "Enabled": true,
-              "__Prefab": "prefabs/buildings/dropper.prefab"
-            },
-            {
-              "Id": "bf081e93-7601-4609-bece-373a078cb5e4",
-              "Name": "furnace",
-              "Position": "48,0,-0.000004021735",
-              "Tags": "building,furnace",
-              "Enabled": true,
-              "__Prefab": "prefabs/buildings/furnace.prefab"
+              "__type": "Workspace",
+              "Owner": "00000000-0000-0000-0000-000000000000"
             }
           ]
         }
