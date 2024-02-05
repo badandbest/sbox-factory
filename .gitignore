@@ -7,14 +7,12 @@
 .vs/*
 .vscode/*
 *.csproj
-obj/*
-Properties/*
-code/obj/*
-code/Properties/*
+*.sln
+**/obj
+**/Properties
 
 # Auto-generated asset related files
 *.generated.*
 *.*_c
 *.los
 *.vpk
-*.sln
