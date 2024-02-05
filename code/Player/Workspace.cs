@@ -1,4 +1,3 @@
-using System;
 namespace Factory;
 
 [Title( "Workspace" )]

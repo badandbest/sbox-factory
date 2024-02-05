@@ -1,4 +1,3 @@
-global using Sandbox;
 using Sandbox.Diagnostics;
 using Sandbox.Network;
 namespace Factory;
@@ -29,7 +28,7 @@ public sealed class GameManager : Component, Component.INetworkListener
 		}
 		else OnActive( Connection.Local );
 	}
-	
+
 	public void OnActive( Connection channel )
 	{
 		// Get an available workspace.

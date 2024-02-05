@@ -1,4 +1,3 @@
-using System;
 namespace Factory.Buildings;
 
 public class Furnace : BaseBuilding, Component.ITriggerListener
