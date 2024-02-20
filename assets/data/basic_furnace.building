@@ -1,0 +1,7 @@
+{
+  "Name": "Furnace",
+  "Description": "Sells your ores",
+  "Cost": 0,
+  "Prefab": "prefabs/furnace/basic_furnace.prefab",
+  "__references": []
+}

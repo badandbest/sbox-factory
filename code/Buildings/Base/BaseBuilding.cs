@@ -5,8 +5,9 @@ namespace Factory.Buildings;
 [Icon( "precision_manufacturing" )]
 public abstract class BaseBuilding : Component
 {
-	//public Client Owner { get => Workspace.Owner; }
-	
 	public Workspace Workspace => Components.GetInParent<Workspace>();
+	
+	[Property]
+	public BuildingResource Resource { get; set; }
 }
 

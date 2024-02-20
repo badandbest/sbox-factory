@@ -1,0 +1,7 @@
+{
+  "Name": "Droppers",
+  "Description": "Dispenses ores.",
+  "Cost": 0,
+  "Prefab": "prefabs/dropper/basic_dropper.prefab",
+  "__references": []
+}

@@ -1,0 +1,37 @@
+{
+  "RootObject": {
+    "Id": "247a284a-aecc-4115-9e01-96a2b6f72047",
+    "Name": "basic_conveyor",
+    "Tags": "conveyor,building",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Conveyor",
+        "Resource": "data/basic_conveyor.building",
+        "Speed": 1
+      },
+      {
+        "__type": "ModelRenderer",
+        "BodyGroups": 11,
+        "MaterialGroup": "blueprint",
+        "MaterialOverride": null,
+        "Model": "models/conveyor/basic_conveyor/basic_conveyor.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "BoxCollider",
+        "Center": "0,0,4",
+        "IsTrigger": false,
+        "Scale": "32,32,8",
+        "Static": true,
+        "Surface": null
+      }
+    ],
+    "Children": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}
