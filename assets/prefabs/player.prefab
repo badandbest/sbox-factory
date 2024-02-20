@@ -1,12 +1,12 @@
 {
   "RootObject": {
-    "Id": "15efb1ef-d072-4243-8fc2-43f9b99b14ab",
+    "Id": "2bbe20f7-abaf-4f86-a6d9-848b62a9629e",
     "Name": "player",
     "Tags": "player",
     "Enabled": true,
     "Components": [
       {
-        "__type": "Player",
+        "__type": "Pawn",
         "Crouching": false,
         "EyeAngles": "0,0,0",
         "EyeHeight": 64,
@@ -25,12 +25,13 @@
     ],
     "Children": [
       {
-        "Id": "e71de0b2-72c2-46a0-9837-298d526dba16",
+        "Id": "3bd38479-c4c8-4fc2-b29b-a0dec944c053",
         "Name": "Body",
         "Enabled": true,
         "Components": [
           {
             "__type": "SkinnedModelRenderer",
+            "AnimationGraph": null,
             "BodyGroups": 341,
             "BoneMergeTarget": null,
             "CreateBoneObjects": false,
@@ -55,7 +56,7 @@
             "LookAtEnabled": false,
             "Target": {
               "_type": "component",
-              "go": "e71de0b2-72c2-46a0-9837-298d526dba16",
+              "go": "3bd38479-c4c8-4fc2-b29b-a0dec944c053",
               "component_type": "SkinnedModelRenderer"
             }
           }

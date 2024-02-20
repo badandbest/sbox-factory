@@ -1,3 +1,4 @@
+using Factory.Player;
 namespace Factory.Buildings;
 
 [Title( "Building" )]

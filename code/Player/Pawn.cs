@@ -1,9 +1,9 @@
 namespace Factory.Player;
 
-[Group( "Factory" )]
-[Title( "Player" )]
+[Title( "Pawn" )]
+[Category( "Factory" )]
 [Icon( "switch_account" )]
-public sealed partial class Player : Component
+public sealed partial class Pawn : Component
 {
 	public Ray AimRay => new( Transform.Position + new Vector3( 0f, 0f, EyeHeight ), EyeAngles.Forward );
 
@@ -22,7 +22,7 @@ public sealed partial class Player : Component
 	protected override void OnFixedUpdate()
 	{
 		if ( IsProxy ) return;
-		
+
 		CrouchInput();
 		MovementInput();
 	}
