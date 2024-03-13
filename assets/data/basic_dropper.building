@@ -2,6 +2,9 @@
   "Name": "Droppers",
   "Description": "Dispenses ores.",
   "Cost": 0,
-  "Prefab": "prefabs/dropper/basic_dropper.prefab",
+  "Prefab": {
+    "_type": "gameobject",
+    "prefab": "prefabs/dropper/basic_dropper.prefab"
+  },
   "__references": []
 }

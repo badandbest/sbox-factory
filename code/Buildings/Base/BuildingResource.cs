@@ -9,5 +9,5 @@ public sealed class BuildingResource : GameResource
 
 	public int Cost { get; set; }
 	
-	public PrefabFile Prefab { get; set; }
+	public GameObject Prefab { get; set; }
 }

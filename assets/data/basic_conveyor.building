@@ -2,6 +2,9 @@
   "Name": "Conveyor",
   "Description": "Moves your ores.",
   "Cost": 1,
-  "Prefab": "prefabs/conveyor/basic_conveyor.prefab",
+  "Prefab": {
+    "_type": "gameobject",
+    "prefab": "prefabs/conveyor/basic_conveyor.prefab"
+  },
   "__references": []
 }
