@@ -1,5 +1,4 @@
 using Factory.Buildings;
-using Factory.Utility;
 namespace Factory;
 
 [Title( "Workspace" )]
