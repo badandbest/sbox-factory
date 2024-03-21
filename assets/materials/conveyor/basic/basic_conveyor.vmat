@@ -1,0 +1,27 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "shaders/conveyor.shader"
+
+	//---- Ambient Occlusion ----
+	AmbientOcclusion "materials/conveyor/basic/basic_conveyor_ao.png"
+
+	//---- Color ----
+	Color "materials/conveyor/basic/basic_conveyor_color.png"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Metalness ----
+	Metalness "materials/conveyor/basic/basic_conveyor_metal.png"
+
+	//---- Normal ----
+	Normal "materials/conveyor/basic/basic_conveyor_normal.png"
+
+	//---- Rough ----
+	Rough "materials/conveyor/basic/basic_conveyor_rough.png"
+
+	//---- Speed ----
+	g_flSpeed "1.000"
+}

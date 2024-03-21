@@ -8,7 +8,6 @@
   "HasAssets": true,
   "AssetsPath": "/assets/",
   "Resources": null,
-  "MenuResources": "*",
   "HasCode": true,
   "CodePath": "/code/",
   "PackageReferences": [],
@@ -195,62 +194,6 @@
           "Name": "Walk",
           "KeyboardCode": "ALT",
           "GroupName": "Movement"
-        }
-      ]
-    },
-    "Collision": {
-      "Defaults": {
-        "solid": "Collide",
-        "trigger": "Trigger",
-        "player": "Collide",
-        "building": "Collide",
-        "ore": "Unset",
-        "melting": "Unset"
-      },
-      "Pairs": [
-        {
-          "a": "solid",
-          "b": "solid"
-        },
-        {
-          "a": "trigger",
-          "b": "playerclip",
-          "r": "Ignore"
-        },
-        {
-          "a": "solid",
-          "b": "trigger"
-        },
-        {
-          "a": "playerclip",
-          "b": "solid",
-          "r": "Collide"
-        },
-        {
-          "a": "player",
-          "b": "player"
-        },
-        {
-          "a": "trigger",
-          "b": "trigger"
-        },
-        {
-          "a": "solid",
-          "b": "player"
-        },
-        {
-          "a": "trigger",
-          "b": "player"
-        },
-        {
-          "a": "building",
-          "b": "building",
-          "r": "Collide"
-        },
-        {
-          "a": "ore",
-          "b": "melting",
-          "r": "Ignore"
         }
       ]
     },

@@ -1,0 +1,291 @@
+{
+  "Model": "models/dev/plane.vmdl",
+  "Description": "",
+  "BlendMode": "Opaque",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "0",
+      "Position": "-528,-384",
+      "Albedo": {
+        "Identifier": "1",
+        "Output": "Result"
+      },
+      "Normal": {
+        "Identifier": "12",
+        "Output": "Result"
+      },
+      "Roughness": {
+        "Identifier": "14",
+        "Output": "Result"
+      },
+      "Metalness": {
+        "Identifier": "13",
+        "Output": "Result"
+      },
+      "AmbientOcclusion": {
+        "Identifier": "11",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/default/default_color.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Color",
+        "Default": "1,1,1,1",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Color"
+        },
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "1",
+      "Position": "-816,-384",
+      "Coords": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "2",
+      "Position": "-1424,-336",
+      "A": {
+        "Identifier": "9",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "17",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float",
+      "Min": 0,
+      "Max": 128,
+      "Value": 1,
+      "Name": "Speed",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": "Speed",
+          "Priority": 5
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "3",
+      "Position": "-1920,-64"
+    },
+    {
+      "_class": "CombineVector",
+      "DefaultX": 0,
+      "DefaultY": 0,
+      "DefaultZ": 0,
+      "DefaultW": 0,
+      "Identifier": "4",
+      "Position": "-1280,-336",
+      "Y": {
+        "Identifier": "2",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "5",
+      "Position": "-2000,-384"
+    },
+    {
+      "_class": "TileAndOffset",
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "6",
+      "Position": "-1104,-384",
+      "Coords": {
+        "Identifier": "5",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "4",
+        "Output": "Vector"
+      }
+    },
+    {
+      "_class": "SplitVector",
+      "Identifier": "7",
+      "Position": "-1776,-336",
+      "Input": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Time",
+      "Identifier": "8",
+      "Position": "-1920,-128"
+    },
+    {
+      "_class": "Round",
+      "Identifier": "9",
+      "Position": "-1600,-336",
+      "Input": {
+        "Identifier": "7",
+        "Output": "X"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "1104,512",
+      "Color": "Yellow",
+      "Title": "Texture Scrolling",
+      "Description": "",
+      "Layer": 3,
+      "Identifier": "10",
+      "Position": "-1440,-432"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/default/default_ao.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Ambient Occlusion",
+        "Default": "1,1,1,1",
+        "Extension": "AO",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Ambient Occlusion",
+          "Priority": 4
+        },
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "11",
+      "Position": "-816,384",
+      "Coords": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/default/default_normal.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Normal",
+        "Default": "1,1,1,1",
+        "Extension": "Normal",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Normal",
+          "Priority": 1
+        },
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "12",
+      "Position": "-816,-192",
+      "Coords": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/default/default_metal.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Metalness",
+        "Default": "1,1,1,1",
+        "Extension": "Metal",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Metalness",
+          "Priority": 3
+        },
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "13",
+      "Position": "-816,192",
+      "Coords": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "materials/default/default_rough.tga",
+      "Sampler": {},
+      "UI": {
+        "Name": "Rough",
+        "Default": "1,1,1,1",
+        "Extension": "Rough",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Rough",
+          "Priority": 2
+        },
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "14",
+      "Position": "-816,0",
+      "Coords": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "544,240",
+      "Color": "White",
+      "Title": "Mask",
+      "Description": "",
+      "Layer": 1,
+      "Identifier": "15",
+      "Position": "-2016,-432"
+    },
+    {
+      "_class": "CommentNode",
+      "Size": "464,192",
+      "Color": "Green",
+      "Title": "Speed",
+      "Description": "",
+      "Layer": 2,
+      "Identifier": "16",
+      "Position": "-1936,-176"
+    },
+    {
+      "_class": "Frac",
+      "Identifier": "17",
+      "Position": "-1600,-128",
+      "Input": {
+        "Identifier": "18",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 1,
+      "Identifier": "18",
+      "Position": "-1696,-128",
+      "A": {
+        "Identifier": "8",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    }
+  ]
+}

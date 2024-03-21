@@ -12,7 +12,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "body"
-						filename = "models/conveyor/basic_conveyor/basic_conveyor.dmx"
+						filename = "models/conveyor/basic/basic_conveyor.dmx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -32,7 +32,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "head_connected"
-						filename = "models/conveyor/basic_conveyor/basic_conveyor.dmx"
+						filename = "models/conveyor/basic/basic_conveyor.dmx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -52,7 +52,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "head_edge"
-						filename = "models/conveyor/basic_conveyor/basic_conveyor.dmx"
+						filename = "models/conveyor/basic/basic_conveyor.dmx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -72,7 +72,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "tail_connected"
-						filename = "models/conveyor/basic_conveyor/basic_conveyor.dmx"
+						filename = "models/conveyor/basic/basic_conveyor.dmx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -92,7 +92,7 @@
 					{
 						_class = "RenderMeshFile"
 						name = "tail_edge"
-						filename = "models/conveyor/basic_conveyor/basic_conveyor.dmx"
+						filename = "models/conveyor/basic/basic_conveyor.dmx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -177,27 +177,6 @@
 							},
 						]
 						hidden_in_tools = false
-					},
-				]
-			},
-			{
-				_class = "MaterialGroupList"
-				children = 
-				[
-					{
-						_class = "MaterialGroup"
-						name = "blueprint"
-						remaps = 
-						[
-							{
-								from = "materials/conveyor/basic_conveyor/basic_conveyor.vmat"
-								to = "materials/conveyor/basic_conveyor/basic_conveyor_blueprint.vmat"
-							},
-							{
-								from = "materials/conveyor/belt.vmat"
-								to = "materials/conveyor/belt_blueprint.vmat"
-							},
-						]
 					},
 				]
 			},
